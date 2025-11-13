@@ -30,7 +30,7 @@ t-SNE is ideal for understanding clustering and visualizing embeddings in comple
 
 Step 1 — Similarities in High-Dimensional Space
 
-For each pair of points $$x_i$$, $$x_j$$compute the probability that $$x_j$$ is a neighbor of $$x_i$$:
+For each pair of points $$x_i$$, $$x_j$$ compute the probability that $$x_j$$ is a neighbor of $$x_i$$:
 
 $$p_{j|i}$$ = $$\frac{\exp(-||x_i - x_j||^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-||x_i - x_k||^2 / 2\sigma_i^2)}$$
 
