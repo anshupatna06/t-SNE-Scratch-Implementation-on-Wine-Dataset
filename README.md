@@ -75,14 +75,14 @@ This ensures that local relationships from high-dimensional space are preserved 
 ### 🧮 4. Implementation Steps
 
 🧰 Step 1 — Import Libraries
-\'\'\'
+'''python
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_wine
 from sklearn.preprocessing import StandardScaler
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
-\'\'\'
+
 ###
 ---
 
