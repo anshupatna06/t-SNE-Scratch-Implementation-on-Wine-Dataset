@@ -30,22 +30,22 @@ t-SNE is ideal for understanding clustering and visualizing embeddings in comple
 
 Step 1 — Similarities in High-Dimensional Space
 
-For each pair of points , compute the probability that  is a neighbor of :
+For each pair of points $$x_i$$, $$x_j$$compute the probability that $$x_j$$ is a neighbor of $$x_i$$:
 
-$$\p_{j|i}$$ = $$\frac{\exp(-||x_i - x_j||^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-||x_i - x_k||^2 / 2\sigma_i^2)}$$
+$$p_{j|i}$$ = $$\frac{\exp(-||x_i - x_j||^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-||x_i - x_k||^2 / 2\sigma_i^2)}$$
 
 Symmetrize it:
 
-$$\p_{ij}$$ = $$\frac{p_{j|i} + p_{i|j}}{2n}$$
+$$p_{ij}$$ = $$\frac{p_{j|i} + p_{i|j}}{2n}$$
 
 
 ---
 
 Step 2 — Similarities in Low-Dimensional Space
 
-Map the data to low-dimensional space as  and compute:
+Map the data to low-dimensional space as $$y_i$$, $$y_j$$ and compute:
 
-$$\q_{ij}$$ = $$\frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}}$$
+$$q_{ij}$$ = $$\frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}}$$
 
 Here we use Student’s t-distribution to allow for better cluster separation.
 
@@ -139,17 +139,6 @@ Visualizing results of unsupervised models
 
 
 ---
-
-📘  Summary Table
-
-Stage	Description	Formula / Tool
-
-Step 1	Compute similarities in high-dim	Gaussian 
-Step 2	Compute similarities in low-dim	Student-t 
-Step 3	Minimize KL divergence	KL(P
-Step 4	Gradient descent optimization	max_iter, learning_rate
-Step 5	Visualization	Matplotlib/Seaborn
-
 
 
 ---
