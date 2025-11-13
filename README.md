@@ -39,7 +39,7 @@ t-SNE is ideal for understanding clustering and visualizing embeddings in comple
 
 Step 1 — Similarities in High-Dimensional Space
 
-For each pair of points $$\x_i$$, $$\x_j$$ compute the probability that $$\x_i$$  is a neighbor of $$\x_j$$ :
+For each pair of points $$x_i$$, $$x_j$$ compute the probability that $$x_i$$  is a neighbor of $$x_j$$ :
 
 $$p_{j|i}$$ = $$\frac{\exp(-||x_i - x_j||^2 / 2\sigma_i^2)}{\sum_{k \neq i} \exp(-||x_i - x_k||^2 / 2\sigma_i^2)}$$
 
@@ -52,7 +52,7 @@ $$p_{ij}$$ = $$\frac{p_{j|i} + p_{i|j}}{2n}$$
 
 Step 2 — Similarities in Low-Dimensional Space
 
-Map the data to low-dimensional space as $$\y_i$$, $$\y_j$$ and compute:
+Map the data to low-dimensional space as $$y_i$$, $$y_j$$ and compute:
 
 $$q_{ij}$$ = $$\frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq l} (1 + ||y_k - y_l||^2)^{-1}}$$
 
@@ -83,10 +83,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 
-
+###
 ---
 
-🧪 Step 2 — Load and Preprocess Dataset
+### 🧪 Step 2 — Load and Preprocess Dataset
 
 wine = load_wine()
 X = wine.data
